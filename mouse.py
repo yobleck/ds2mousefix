@@ -2,7 +2,7 @@
 # https://www.kernel.org/doc/Documentation/input/input.txt
 # https://python-evdev.readthedocs.io/en/latest/tutorial.html
 # https://stackoverflow.com/questions/25346171/cant-import-module-when-using-root-user     sudo -E for running python
-
+# cat /proc/bus/input/devices
 
 """
 #for looking at raw input
@@ -23,8 +23,12 @@ while True:
 """
 
 import evdev, time, subprocess;
-device = evdev.InputDevice('/dev/input/event8'); #this may have to be searched for if eventX changes on reboot
 
+#logitech mouse specific
+for x in [evdev.InputDevice(path) for path in evdev.list_devices()]:
+    if(x.name == "Logitech USB Receiver" and x.phys == "usb-0000:2a:00.1-6/input0"): #change these to the name of your device (see line 5)
+        device = evdev.InputDevice(x.path); #this may have to be searched for if eventX changes on reboot
+print(device);
 pressed = False;
 while True:
     try:
