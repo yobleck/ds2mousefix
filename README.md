@@ -1,5 +1,5 @@
 # ds2mousefix WIP
-Various fixes for mouse input on dark souls 2 for linux
+Various fixes/workarounds for mouse input on dark souls 2 for linux
 
 ## python script that allows binding of extra buttons on mice to buttons on the keyboard.
   - ds2 doesnt allow for binding extra mouse buttons to game inputs
