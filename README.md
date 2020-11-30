@@ -16,5 +16,5 @@ Various fixes/workarounds for mouse input on dark souls 2 for linux
   -replace "y" and "u" with whatever key on the keyboard the ingame action is bound to
   - after launching ds2 run the script with "sudo -E python mouse.py". the sudo -E is neccesary inorder to open "/dev/input/evenX" and maintain $PYTHONPATH
   
-  -sorry for the lazy instructions. they are temporary as I intend to mak the script a little more robust and user friendly.
+  -sorry for the lazy instructions. they are temporary as I may make the script a little more robust(crashes when mouse is unplugged) and user friendly.
   
